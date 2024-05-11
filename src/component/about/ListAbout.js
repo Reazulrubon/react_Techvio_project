@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom'
 export default function ListAbout() {
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get("http://localhost/REACT/aa/backend/about/listabout.php")
+        axios.get("http://localhost/REACT/react_palovit_project/backend/about/listAbout.php")
             .then((res) => setData(res.data))
     }, [])
     const deletNews = (id) => {
-        axios.get(`http://localhost/REACT/aa/backend/about/deleteabout.php?id=${id}`)
+        axios.get(`http://localhost/REACT/react_palovit_project/backend/about/deleteAbout.php?id=${id}`)
             .then((res) => {
                 console.log(res.data)
-                axios.get("http://localhost/REACT/aa/backend/about/listabout.php")
+                axios.get("http://localhost/REACT/react_palovit_project/backend/about/listAbout.php")
                     .then((res) => setData(res.data))
             })
     }
@@ -40,7 +40,7 @@ export default function ListAbout() {
                         return (
                             <tr key={i}>
                                 <td>{i + 1}</td>
-                                <td><img src={`http://localhost/REACT/aa/backend/image/${d.photo}`} alt={d.title} height={100} /></td>
+                                <td><img src={`http://localhost/REACT/react_palovit_project/backend/image/${d.photo}`} alt={d.title} height={100} /></td>
                                 <td>{d.title}</td>
                                 <td>{d.content}</td>
                                 <td>{d.btn}</td>

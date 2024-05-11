@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom'
 export default function ListTeam() {
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get("http://localhost/REACT/aa/backend/team/listTeam.php")
+        axios.get("http://localhost/REACT/react_palovit_project/backend/team/listTeam.php")
             .then((res) => setData(res.data))
     }, [])
     const deletNews = (id) => {
-        axios.get(`http://localhost/REACT/aa/backend/team/deleteTeam.php?id=${id}`)
+        axios.get(`http://localhost/REACT/react_palovit_project/backend/team/deleteTeam.php?id=${id}`)
             .then((res) => {
                 console.log(res.data)
-                axios.get("http://localhost/REACT/aa/backend/team/listTeam.php")
+                axios.get("http://localhost/REACT/react_palovit_project/backend/team/listTeam.php")
                     .then((res) => setData(res.data))
             })
     }
@@ -39,7 +39,7 @@ export default function ListTeam() {
                         return (
                             <tr key={i}>
                                 <td>{i + 1}</td>
-                                <td><img src={`http://localhost/REACT/aa/backend/image/${d.photo}`} alt={d.title} height={100} /></td>
+                                <td><img src={`http://localhost/REACT/react_palovit_project/backend/image/${d.photo}`} alt={d.title} height={100} /></td>
                                 <td>{d.title}</td>
                                 <td>{d.department}</td>
                                 

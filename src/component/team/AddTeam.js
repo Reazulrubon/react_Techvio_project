@@ -14,7 +14,7 @@ export default function AddTeam() {
     formdata.append("photo", photo);
     axios
       .post(
-        "http://localhost/REACT/aa/backend/team/addTeam.php",
+        "http://localhost/REACT/react_palovit_project/backend/team/addTeam.php",
         formdata,
         {
           headers: {

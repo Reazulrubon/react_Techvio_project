@@ -4,7 +4,7 @@ import React,{useEffect,useState} from 'react'
 export default function Blog_section() {
   const [data,setdata] =useState([])
   useEffect(()=>{
-    axios.get("http://localhost/REACT/aa/backend/blog/listblog.php")
+    axios.get("http://localhost/REACT/react_palovit_project/backend/blog/listBlog.php")
     .then((res)=> setdata(res.data))
   },[])
   return (
@@ -28,7 +28,7 @@ export default function Blog_section() {
           <div className="blog-single-item">
             <div className="blog-image">
               <a href="single-blog.html">
-              <img src={`http://localhost/REACT/aa/backend/image/${d.photo}`} alt={d.title}/>
+              <img src={`http://localhost/REACT/react_palovit_project/backend/image/${d.photo}`} alt={d.title}/>
               </a>
             </div>
             <div className="blog-description">

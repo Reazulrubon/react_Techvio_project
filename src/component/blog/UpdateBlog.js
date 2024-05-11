@@ -12,7 +12,7 @@ export default function UpdateBlog() {
 
     const navi=useNavigate()
     useEffect(()=>{
-        axios.get(`http://localhost/REACT/aa/backend/blog/getBlog.php?id=${id}`)
+        axios.get(`http://localhost/REACT/react_palovit_project/backend/blog/getBlog.php?id=${id}`)
         .then((res)=>{
             setTitle(res.data.title)
             setcontent(res.data.content)
@@ -26,7 +26,7 @@ export default function UpdateBlog() {
         formdata.append('photo',photo)
         formdata.append('btn',btn)
         formdata.append('id',id)
-        axios.post("http://localhost/REACT/aa/backend/blog/updateBlog.php",formdata,{
+        axios.post("http://localhost/REACT/react_palovit_project/backend/blog/updateBlog.php",formdata,{
             headers:{
                 "Content-Type":"multipart/form-data"
             }

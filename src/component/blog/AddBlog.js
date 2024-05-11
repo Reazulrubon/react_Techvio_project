@@ -16,7 +16,7 @@ export default function AddBlog() {
     formdata.append("btn", btn);
     axios
       .post(
-        "http://localhost/REACT/aa/backend/blog/addBlog.php",
+        "http://localhost/REACT/react_palovit_project/backend/blog/addBlog.php",
         formdata,
         {
           headers: {

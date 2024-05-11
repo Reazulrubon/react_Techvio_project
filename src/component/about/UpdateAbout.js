@@ -12,7 +12,7 @@ export default function UpdateAbout() {
 
     const navi=useNavigate()
     useEffect(()=>{
-        axios.get(`http://localhost/REACT/aa/backend/about/getabout.php?id=${id}`)
+        axios.get(`http://localhost/REACT/react_palovit_project/backend/about/getAbout.php?id=${id}`)
         .then((res)=>{
             setTitle(res.data.title)
             setcontent(res.data.content)
@@ -26,7 +26,7 @@ export default function UpdateAbout() {
         formdata.append('photo',photo)
         formdata.append('btn',btn)
         formdata.append('id',id)
-        axios.post("http://localhost/REACT/aa/backend/about/updateabout.php",formdata,{
+        axios.post("http://localhost/REACT/react_palovit_project/backend/about/updateAbout.php",formdata,{
             headers:{
                 "Content-Type":"multipart/form-data"
             }

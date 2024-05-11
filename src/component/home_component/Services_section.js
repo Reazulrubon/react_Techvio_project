@@ -4,7 +4,7 @@ import React,{useEffect,useState} from 'react'
 export default function Services_section() {
   const [data,setdata] =useState([])
   useEffect(()=>{
-    axios.get("http://localhost/REACT/aa/backend/service/listService.php")
+    axios.get("http://localhost/REACT/react_palovit_project/backend/service/listService.php")
     .then((res)=> setdata(res.data))
   },[])
 
@@ -29,7 +29,7 @@ export default function Services_section() {
           <div className="single-services-item">
             <div className="services-icon">
               {/* <i className="flaticon-development" /> */}
-              <img src={`http://localhost/REACT/aa/backend/image/${d.photo}`} alt={d.title}/>
+              <img src={`http://localhost/REACT/react_palovit_project/backend/image/${d.photo}`} alt={d.title}/>
             </div>
             <h3>{d.title}</h3>
             <p>

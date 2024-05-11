@@ -16,7 +16,7 @@ export default function AddAbout() {
     formdata.append("btn", btn);
     axios
       .post(
-        "http://localhost/REACT/aa/backend/about/addabout.php",
+        "http://localhost/REACT/react_palovit_project/backend/about/addAbout.php",
         formdata,
         {
           headers: {
@@ -26,7 +26,7 @@ export default function AddAbout() {
       )
       .then((res) => {
         console.log(res.data);
-        setTitle("");
+        setTitle("")
         setphoto("");
         setcontent("");
         setbtn("");

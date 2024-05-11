@@ -12,7 +12,7 @@ export default function UpdateTeam() {
   const navi = useNavigate();
   useEffect(() => {
     axios
-      .get(`http://localhost/REACT/aa/backend/team/getTeam.php?id=${id}`)
+      .get(`http://localhost/REACT/react_palovit_project/backend/team/getTeam.ph?id=${id}`)
       .then((res) => {
         setTitle(res.data.title);
         setdepartment(res.data.department);
@@ -26,7 +26,7 @@ export default function UpdateTeam() {
 
     formdata.append("id", id);
     axios
-      .post("http://localhost/REACT/aa/backend/team/updateTeam.php", formdata, {
+      .post("http://localhost/REACT/react_palovit_project/backend/team/updateTeam.php", formdata, {
         headers: {
           "content-Type": "multipart/form-data",
         },

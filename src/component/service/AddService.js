@@ -16,7 +16,7 @@ export default function AddService() {
     formdata.append("btn", btn);
     axios
       .post(
-        "http://localhost/REACT/aa/backend/service/addService.php",
+        "http://localhost/REACT/react_palovit_project/backend/service/addService.php",
         formdata,
         {
           headers: {

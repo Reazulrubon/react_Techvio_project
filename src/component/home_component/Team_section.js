@@ -4,7 +4,7 @@ import React,{useEffect,useState} from 'react'
 export default function Team_section() {
   const [data,setdata] =useState([])
   useEffect(()=>{
-    axios.get("http://localhost/REACT/aa/backend/team/listTeam.php")
+    axios.get("http://localhost/REACT/react_palovit_project/backend/team/listTeam.php")
     .then((res)=> setdata(res.data))
   },[])
   return (
@@ -26,7 +26,7 @@ export default function Team_section() {
         <div className="col-lg-3 col-md-6" key={i} >
           <div className="single-team-box">
             <div className="team-image">
-            <img src={`http://localhost/REACT/aa/backend/image/${d.photo}`} alt={d.title}/>
+            <img src={`http://localhost/REACT/react_palovit_project/backend/image/${d.photo}`} alt={d.title}/>
               <div className="team-social-icon">
                 <a href="#">
                   <i className="fab fa-facebook-f" />

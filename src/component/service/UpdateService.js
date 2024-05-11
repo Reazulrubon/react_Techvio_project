@@ -12,7 +12,7 @@ export default function UpdateService() {
 
     const navi=useNavigate()
     useEffect(()=>{
-        axios.get(`http://localhost/REACT/aa/backend/service/getServices.php?id=${id}`)
+        axios.get(`http://localhost/REACT/react_palovit_project/backend/service/getServices.php?id=${id}`)
         .then((res)=>{
             setTitle(res.data.title)
             setcontent(res.data.content)
@@ -26,7 +26,7 @@ export default function UpdateService() {
         formdata.append('photo',photo)
         formdata.append('btn',btn)
         formdata.append('id',id)
-        axios.post("http://localhost/REACT/aa/backend/service/updateService.php",formdata,{
+        axios.post("http://localhost/REACT/react_palovit_project/backend/service/updateService.php",formdata,{
             headers:{
                 "Content-Type":"multipart/form-data"
             }
